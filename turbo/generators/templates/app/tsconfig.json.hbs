@@ -1,0 +1,10 @@
+{
+	"extends": "@repo/tsconfig/base.json",
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"types": ["@repo/tsconfig/reset", "bun"]
+	},
+	"include": ["src"]
+}

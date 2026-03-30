@@ -1,0 +1,71 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": [
+			"**",
+			"!**/dist",
+			"!**/.auth",
+			"!**/.cache",
+			"!**/.turbo",
+			"!**/.output",
+			"!node_modules",
+			"!**/.tanstack",
+			"!**/themes.css",
+			"!**/.typescript",
+			"!**/routeTree.gen.ts"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"useExhaustiveDependencies": "warn"
+			},
+			"nursery": {
+				"noFloatingPromises": "error",
+				"useExhaustiveSwitchCases": "error",
+				"useSortedClasses": {
+					"fix": "safe",
+					"level": "warn",
+					"options": {
+						"functions": ["clsx", "cva", "cn", "cx"]
+					}
+				}
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"lineWidth": 95,
+			"bracketSpacing": true,
+			"quoteStyle": "double",
+			"semicolons": "asNeeded",
+			"trailingCommas": "none",
+			"jsxQuoteStyle": "double",
+			"arrowParentheses": "always"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"extends": "@repo/tsconfig/base.json",
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"types": ["vite/client", "@repo/tsconfig/reset"]
+	},
+	"include": ["vite.config.ts", "**/*.ts", "**/*.tsx"]
+}

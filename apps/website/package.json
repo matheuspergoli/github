@@ -1,0 +1,38 @@
+{
+	"name": "@repo/website",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"clean": "rm -rf .turbo .typescript dist node_modules",
+		"typecheck": "tsc --noEmit --emitDeclarationOnly false"
+	},
+	"dependencies": {
+		"@repo/ui": "workspace:*",
+		"@tabler/icons-react": "^3.41.1",
+		"@tanstack/react-query": "^5.95.2",
+		"@tanstack/react-router": "^1.168.8",
+		"@tanstack/react-router-ssr-query": "^1.166.10",
+		"@tanstack/react-start": "^1.167.14",
+		"axios": "^1.14.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"superjson": "^2.2.6",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@repo/tailwind": "workspace:*",
+		"@repo/tsconfig": "workspace:*",
+		"@tailwindcss/vite": "^4.2.2",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.1",
+		"nitro": "3.0.260311-beta",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.3"
+	}
+}

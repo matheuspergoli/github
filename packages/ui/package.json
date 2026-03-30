@@ -1,0 +1,38 @@
+{
+	"name": "@repo/ui",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"imports": {
+		"#src/libs/*": "./src/libs/*.ts",
+		"#src/hooks/*": "./src/hooks/*.ts",
+		"#src/components/*": "./src/components/*.tsx"
+	},
+	"exports": {
+		"./libs/*": "./src/libs/*.ts",
+		"./components/*": "./src/components/*.tsx"
+	},
+	"license": "MIT",
+	"scripts": {
+		"ui-add": "pnpm dlx shadcn@canary add",
+		"clean": "rm -rf .turbo .typescript dist node_modules",
+		"typecheck": "tsc --noEmit --emitDeclarationOnly false"
+	},
+	"dependencies": {
+		"@base-ui/react": "^1.3.0",
+		"@tabler/icons-react": "^3.41.1",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"sonner": "^2.0.7",
+		"tailwind-merge": "^3.5.0",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@repo/tailwind": "workspace:*",
+		"@repo/tsconfig": "workspace:*",
+		"@types/react": "^19.2.14",
+		"react": "^19.2.4",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^6.0.2"
+	}
+}

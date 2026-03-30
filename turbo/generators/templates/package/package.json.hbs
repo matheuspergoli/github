@@ -1,0 +1,21 @@
+{
+	"name": "@repo/{{ name }}",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"imports": {
+		"#src/*": "./src/*.ts"
+	},
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"license": "MIT",
+	"scripts": {
+		"clean": "rm -rf .turbo .typescript dist node_modules",
+		"typecheck": "tsc --noEmit --emitDeclarationOnly false"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"typescript": "^5.9.3"
+	}
+}
