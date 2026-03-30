@@ -4,7 +4,11 @@ Aplicação web para buscar perfis do GitHub por username e explorar os reposit�
 
 Projeto construído em **monorepo**, com foco em organização, reaproveitamento de UI e boa experiência de desenvolvimento.
 
-## Visão geral
+## Links
+
+- Aplicação em produção: [Acessar GitHub Explorer](https://github-website-explorer.vercel.app/)
+
+## Escopo implementado
 
 - Busca por usuário do GitHub na home
 - Exibição de perfil com dados principais (avatar, bio, seguidores, localização, email etc.)
@@ -39,6 +43,14 @@ Projeto construído em **monorepo**, com foco em organização, reaproveitamento
 - `pnpm workspaces`
 - `Turborepo`
 - `Biome` (format/lint)
+
+## Decisões técnicas
+
+- Organização por feature em `apps/website/src/features` para concentrar regras de domínio
+- Separação de responsabilidades entre `libs` (infra/config), `routes` (navegação) e `shared` (componentes globais)
+- Dados remotos com `TanStack Query` para cache, estados assíncronos e previsibilidade
+- Roteamento com `TanStack Router` para estrutura tipada e navegação baseada em arquivo
+- Build/SSR com `TanStack Start` + `Nitro` para execução local e deploy na Vercel
 
 ## Arquitetura (monorepo)
 
@@ -119,5 +131,3 @@ Em `apps/website/src`:
 - Fluxo de dados previsível com TanStack Query
 - Reaproveitamento de componentes via pacote `@repo/ui`
 - Boa UX para estados de carregamento e erro
-
-Feito como projeto técnico de estudo e prática de frontend moderno com monorepo.
